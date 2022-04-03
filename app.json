@@ -1,0 +1,225 @@
+{
+      "name": "Drago Bot",
+      "logo": "https://te.legra.ph/file/014a1a289998a548996b9.jpg",
+      "description": "A Telegram Powerfull Group Managment Bot written in Python using Pyrogram and Telethon",
+      "keywords": [
+         "telegram",
+         "anime",
+         "group",
+         "manager",
+         "Drago",
+         "Dragobot",
+         "telegram"
+      ],   
+   "repository": "https://github.com/tech-drago/DragoBot",
+   "addons": [
+      {
+         "options": {
+            "version": "13"
+         },
+         "plan": "heroku-postgresql"
+      }
+   ],
+   "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    }
+  ],  
+   "env": {
+      "TOKEN": {
+         "description": "Your bot token. Get one from @BotFather duh",
+         "required": true,
+         "value": ""
+      },
+      "API_ID": {
+         "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
+         "required": true,
+         "value": ""
+      },
+      "API_HASH": {
+         "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
+         "required": true,
+         "value": ""
+      },    
+      "SQLALCHEMY_DATABASE_URI": {
+         "description": "Your postgres sql db, empty this field if you dont have one.",
+         "required": false,
+         "value": "sqldbtype://username:pw@hostname:port/db_name"
+      },      
+      "OWNER_ID": {
+         "description": "Your user ID as an integer.",
+         "required": true,
+         "value": "1218405248"
+      },
+      "BOT_ID": {
+         "description": "Your bot ID.. Use any other bot to get it.",
+         "required": false,
+         "value": "1836395711"
+      },
+      "HEROKU_API_KEY": {
+        "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
+        "value": ""
+      },
+      "HEROKU_APP_NAME": {
+        "description": "Enter the Heroku app name here (Must an exact same name with your input above).",
+        "required": false
+      },
+      "OWNER_USERNAME": {
+         "description": "Your username without the @",
+         "value": "cl_me_logesh"
+      },
+      "BOT_USERNAME": {
+         "description": "Your bot username without the @",
+         "value": "Drago_Bot"
+      },
+      "ASS_USERNAME": {
+         "description": "Your Musicbot Assistant username without the @",
+         "value": "DragoxAssistant"
+      },
+      "BOT_NAME": {
+         "description": "Your Bot Name",
+         "value": "Drago"
+      },
+      "UPDATE_CHANNEL": {
+         "description": "Your Telegram Bot Update Channel username Without @ like: DragoxUpdates.",
+         "required": true,
+         "value": "logi_channel"
+      },
+      "SUPPORT_CHAT": {
+         "description": "Your Telegram support group chat username Without @ like: DragoxSupport.",
+         "required": true,
+         "value": "Logi_channel"
+      },
+      "START_IMG": {
+         "description": "Enter Your Bot Image Telegraph Link",
+         "required": true,
+         "value": "https://te.legra.ph/file/772a084488dbac5eafd7a.jpg"
+      },
+      "BOT_TUT": {
+         "description": "Enter Your Bot Setup Video Tutorial Telegraph Link Leave As it is If You Dont Have",
+         "required": false,
+         "value": ""
+      },
+      "MUSICBOT_TUT": {
+         "description": "Enter Your Music Bot Setup Video Tutorial Telegraph Link Leave As it Is If You Dont Have",
+         "required": false,
+         "value": ""
+      },
+      "DURATION_LIMIT": {
+         "description": " In music bot Duration Limit for Playout (In Mins).. Example: 60",
+         "value": "60",
+         "required": true
+      },
+      "ASSISTANT_PREFIX": {
+         "description": "Prefix for Assistant Commands.",
+         "value": ".",
+         "required": true
+      },
+      "STRING_SESSION1": {
+         "description": "A Pyrogram String Session. One Assistant is Compulsory.",
+         "value": "",
+         "required": true
+      },
+       "STRING_SESSION2": {
+         "description": "A Pyrogram String Session. Leave blank if you dont want Multi-Assistant",
+         "value": "",
+         "required": false
+      },
+       "STRING_SESSION3": {
+         "description": "A Pyrogram String Session. Leave blank if you dont want Multi-Assistant",
+         "value": "",
+         "required": false
+      },
+       "STRING_SESSION4": {
+         "description": "A Pyrogram String Session. Leave blank if you dont want Multi-Assistant",
+         "value": "",
+         "required": false
+      },
+       "STRING_SESSION5": {
+         "description": "A Pyrogram String Session. Leave blank if you dont want Multi-Assistant",
+         "value": "",
+         "required": false
+      },
+
+      "MONGO_DB_URI": {
+         "description": "Required for database connections.",
+         "required": true,
+         "value": ""
+      },
+      "EVENT_LOGS": {
+         "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
+         "required": true,
+         "value": "-123456798"
+      },
+      "JOIN_LOGGER": {
+         "description": "A channel where bot will print who added it to what group, useful during debugging or spam handling.",
+         "required": true,
+         "value": "-123456798"
+      },      
+      "DEV_USERS": {
+         "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Masha support then keep the current ID's here at they are and add yours.",
+         "required": false,
+         "value": ""
+      },
+      "STRICT_GBAN": {
+         "description": "Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.",
+         "value": "True"
+      },
+      "DRAGONS": {
+         "description": "A space separated list of user IDs who you want to assign as sudo users.",
+         "required": false,
+         "value": ""
+      },
+      "DEMONS": {
+         "description": "A space separated list of user IDs who you wanna assign as support users(gban perms only).",
+         "required": false,
+         "value": ""
+      },
+      "TIGERS": {
+         "description": "A space separated list of user IDs who you wanna assign as tiger users.",
+         "required": false,
+         "value": ""
+      },
+      "WOLVES": {
+         "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
+         "required": false,
+         "value": ""
+      },
+      "ENV": {
+         "description": "Setting this to ANYTHING will enable environment variables. Leave it as it is",
+         "value": "ANYTHING"
+      },
+      "URL": {
+         "description": "The Heroku App URL :-  https://<appname>.herokuapp.com/",
+         "required": false,
+         "value": "https://<appname>.herokuapp.com/"
+      },
+      "UPSTREAM_REPO": {
+         "description": "If you dont know this, Leave as it is",
+         "value": "https://github.com/LOGI-LAB/music-video-bot",
+         "required": true
+       },
+       "UPSTREAM_BRANCH": {
+         "description": "Repo's Branch Name",
+         "value": "master",
+         "required": true
+       },
+      "PING_IMG": {
+
+         "description": "For custom ping image, use telegra.ph link",
+   
+         "value": "",
+   
+         "required": false
+   
+       },
+      "DONATION_LINK": {
+         "description": "Optional: link where you would like to receive donations. If you are a noob, better leave it linking to paul",
+         "required": false,
+         "value": "https://t.me/PrincexDonateBot"
+      }   
+   }
+}
